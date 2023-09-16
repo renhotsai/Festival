@@ -10,7 +10,7 @@ Every page must have the same header menu and a footer section.
 
 **Header:**
 * Include a minimum of 4 navigation links (example: HOME, SCHEDULE, BUY TICKETS, CONTACT). You may choose which navigation links to include.
-* The links do not need to work (example: use <a href=”#”>).
+* The links do not need to work (example: use \<a href=”#”\>).
 
 
 **Footer:**
@@ -38,3 +38,8 @@ This is the homepage for the website. In addition to the page header and footer,
 * Show a map containing the location of the festival.
 * Location must be marked with a map marker.
 * Use Leaflet.js to show the map. See this link:https://www.geeksforgeeks.org/using-leaflet-js-to-show-maps-in-a-webpage/
+
+
+## Artist/Movie Details Page
+
+## Purchase Ticket Page
