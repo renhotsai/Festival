@@ -1,6 +1,5 @@
-body {
+body {margin: 0;
     padding: 0;
-    margin: 0;
 }
 header {
     border: 1px solid black;
@@ -8,6 +7,7 @@ header {
     justify-content: center;
     gap: 40px;
     background-color: #D80032;
+    height: 5vh;
 }
 
 header > a {
@@ -24,24 +24,20 @@ main {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
 }
 footer {
     display: flex;
-    justify-content: start;
-    gap: 50vw;
-    /* background-color: black;  */
+    background-color: black; 
     color: white;
-}
-footer div {
-    margin: auto;
+    justify-content: space-between;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    align-items: center;
+    margin-bottom: -100px;
 }
 
 footer> div {
     display: flex;
     gap: 10px;
 }
-footer img{
-    width: 60px;
-}
-
