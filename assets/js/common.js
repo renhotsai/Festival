@@ -1,13 +1,17 @@
 // header
-const headerItems = ["Home", "Schedule", "Tickets", "Contact"];
+const headerItems = [
+    { name: "Home", uri: "../index.html" },
+    { name: "Tickets", uri: "/view/ticket.html" },
+    { name: "Details", uri: "/view/details.html" }
+];
 
 let headerTag;
 for (const headerItem of headerItems) {
     if (headerTag === undefined) {
-        headerTag = `<a href="#">${headerItem}</a>`
+        headerTag = `<a href="${headerItem.uri}">${headerItem.name}</a>`
     }
     else {
-        headerTag += `<a href="#">${headerItem}</a>`
+        headerTag += `<a href="${headerItem.uri}">${headerItem.name}</a>`
     }
 }
 document.querySelector("header").innerHTML = headerTag;
@@ -22,7 +26,7 @@ const footerItems = [
 let footerTag = `
 <div style="align-items: end;">
 <img
-  src="./assets/image/logo5-hub-header-en.svg"
+  src="../assets/image/logo5-hub-header-en.svg"
   alt="hahahaIcon"
   style="width: 120px"
 />
