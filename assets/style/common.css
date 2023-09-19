@@ -27,8 +27,21 @@ main {
     height: 100vh;
 }
 footer {
-    border: 1px solid black;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    gap: 50vw;
+    /* background-color: black;  */
+    color: white;
+}
+footer div {
+    margin: auto;
+}
+
+footer> div {
+    display: flex;
+    gap: 10px;
+}
+footer img{
+    width: 60px;
 }
 
