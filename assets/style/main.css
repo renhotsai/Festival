@@ -1,29 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Roboto:wght@300&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Fredoka', sans-serif;
-}
-header {
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    background-color: #A8DF8E;
-}
-
-header > a {
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-}
-
-header > a:hover {
-    color: #F0F0F0;
-}
-
 main {
     background-image: url("../img/artist-background-image.png");
     background-repeat: no-repeat;
@@ -47,6 +21,8 @@ footer {
     padding-left: 1vw;
     padding-right: 1vw;
     align-items: center;
+  
+
 }
 
 footer> div {
