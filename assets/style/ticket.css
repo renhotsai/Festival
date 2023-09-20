@@ -1,16 +1,50 @@
 body {
+    margin: 0;
     text-align: center;
+}
+
+body > div {
+    background-color: white;
+    padding-bottom: 30px;
 }
 
 #allShow {
     background-color: black;
     color: white;
     font-weight: bold;
+    font-size: 20px;
     padding: 10px;
     margin: 20px auto;
-    width: 200px;
+    width: 20%;
     display: block;
     text-decoration: none;
+}
+#allShow:hover {
+    background-color: white;
+    border: black 1px solid;
+    color: black;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+main > p {
+    font-size: 25px;
+    font-style: italic;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+section > p {
+    font-size: 25px;
+    font-style: italic;    
+    max-width: 90vw;
+    margin: 0 auto 10 auto;
+}
+
+h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
 }
 
 section > div {
@@ -34,16 +68,20 @@ section >div > div{
     margin: 0 auto;padding: 5px;
 }
 
-#FAQ{
-    margin: 50px;
-}
-
 .learnMore {
     background-color: red;
     color: black;
     padding: 10px;
     font-weight: bold;
     text-decoration: none;
+    font-size: 30px;
+    width: 20%;
+}
+
+.learnMore:hover{
+    background-color: white;
+    border: red 1px solid;
+    color: red;
 }
 
 .btn_buy {
@@ -53,6 +91,10 @@ section >div > div{
     background-color: black;
     padding: 10px;
     margin: 20px;
+}
+
+.btn_buy:hover {
+    background-color: red;
 }
 
 .ticketContent {
