@@ -1,11 +1,13 @@
 // header
 const headerItems = [
     { name: "Home", uri: "../index.html" },
+    { name: "Details", uri: "/view/details.html" },
     { name: "Tickets", uri: "/view/ticket.html" },
-    { name: "Details", uri: "/view/details.html" }
+
 ];
 
 let headerTag;
+
 for (const headerItem of headerItems) {
     if (headerTag === undefined) {
         headerTag = `<a href="${headerItem.uri}">${headerItem.name}</a>`
@@ -14,6 +16,8 @@ for (const headerItem of headerItems) {
         headerTag += `<a href="${headerItem.uri}">${headerItem.name}</a>`
     }
 }
+
+
 document.querySelector("header").innerHTML = headerTag;
 
 
