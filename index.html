@@ -31,7 +31,7 @@
     </section>
 
     <!-- Map section -->
-    <section>
+    <section style="display: flex; flex-direction: column; align-items: center;">
         <h1>Map for events: </h1>
         <div id="map" style="width: 960px; height: 500px"></div>
     </section>
@@ -57,26 +57,26 @@
         }).addTo(map);
 
         let locations = [
-            ["comedyToronto", 43.708650, -79.398320],
-            ["comedyDanforthBar", 43.689630, -79.296360],
-            ["comedyDanforthMusic", 40.696670, -74.091970],
-            ["comedyDanforthSoCap", 40.697109, -74.091568],
-            ["comedyWenonaCraft", 43.660438, -79.432812],
-            ["comedyBarCabaret", 43.661976, -79.427093],
-            ["comedyTallBoys", 43.662609, -79.423848],
-            ["comedyTheLabs", 43.665661, -79.407560],
-            ["comedyTheLoyal", 43.655466, -79.414624],
-            ["comedyNothingFancy", 43.656951, -79.403240],
-            ["comedyTheGarrison", 43.649217, -79.422397],
-            ["comedyCivilian", 43.646327, -79.409942],
-            ["comedyRivoli", 43.649378, -79.394955],
-            ["comedyYukYuk", 43.649879, -79.388324],
-            ["comedyElginTheatre", 43.653248, -79.378903],
-            ["comedyCBC", 43.644858, -79.388745],
-            ["comedyBerczyPark", 43.647879, -79.374110],
-            ["comedyMeridianHall", 43.646108, -79.377643],
-            ["comedyScotiaBank", 43.643305, -79.379657],
-            ["comedySecondCity", 43.641516, -79.380033]
+            ["comedyToronto", "2335 Yonge St, Toronto, ON, M4P 2C8.", 43.708650, -79.398320],
+            ["comedyDanforthBar", "2800 Danforth Ave, Toronto, ON M4C 1M1.", 43.689630, -79.296360],
+            ["comedyDanforthMusic", "147 Danforth Ave.", 40.696670, -74.091970],
+            ["comedyDanforthSoCap", "154 Danforth Ave - 2nd floor, Toronto, ON M4K 1N1.", 40.697109, -74.091568],
+            ["comedyWenonaCraft", "1069 Bloor St W, Toronto, ON M6H 1M3.", 43.660438, -79.432812],
+            ["comedyBarCabaret", "945 Bloor St W, Toronto, ON M6H 1L5.", 43.661976, -79.427093],
+            ["comedyTallBoys", "838 Bloor St W, Toronto, ON M6G 1M2.", 43.662609, -79.423848],
+            ["comedyTheLabs", "298 Brunswick Ave, Toronto, ON M5S 2M7.", 43.665661, -79.407560],
+            ["comedyTheLoyal", "608 College St. Toronto, ON M6G 1B4", 43.655466, -79.414624],
+            ["comedyNothingFancy", "276 Augusta Ave, Toronto, ON M5T 2L9", 43.656951, -79.403240],
+            ["comedyTheGarrison", "1197 Dundas St W, Toronto, ON M6J 1X3", 43.649217, -79.422397],
+            ["comedyCivilian", "734 Queen St W, Toronto, ON M6J 1E9", 43.646327, -79.409942],
+            ["comedyRivoli", "334 Queen St W, Toronto, ON M5V 2A2", 43.649378, -79.394955],
+            ["comedyYukYuk", "224 Richmond Street West.", 43.649879, -79.388324],
+            ["comedyElginTheatre", "189 Yonge St.", 43.653248, -79.378903],
+            ["comedyCBC", "25 John St, Toronto, ON M5V 3G6", 43.644858, -79.388745],
+            ["comedyBerczyPark", "49 Front St E, Toronto, ON M5E, Canada.", 43.647879, -79.374110],
+            ["comedyMeridianHall", "1 Front St E, Toronto, ON M5E 1B2.", 43.646108, -79.377643],
+            ["comedyScotiaBank", "40 Bay St., Toronto, ON M5J 2X2.", 43.643305, -79.379657],
+            ["comedySecondCity", "One York Street, 110 Harbour St, Toronto, ON M5J 0B6.",43.641516, -79.380033]
         ];
 
         // Set the view of the map
@@ -84,8 +84,8 @@
         map.setView([43.653248, -79.378903], 12);
 
         for (let i = 0; i < locations.length; i++) {
-        marker = new L.marker([locations[i][1], locations[i][2]])
-            .bindPopup(locations[i][0])
+        marker = new L.marker([locations[i][2], locations[i][3]])
+            .bindPopup(`<h2>${locations[i][0]}</h2><p>${locations[i][1]}</p>`)
             .addTo(map);
         }
 

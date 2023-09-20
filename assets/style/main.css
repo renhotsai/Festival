@@ -12,20 +12,3 @@ main {
     
 }
 
-
-footer {
-    display: flex;
-    background-color: black; 
-    color: white;
-    justify-content: space-between;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    align-items: center;
-  
-
-}
-
-footer> div {
-    display: flex;
-    gap: 10px;
-}
