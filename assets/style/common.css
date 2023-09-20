@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&family=Roboto+Mono:ital,wght@1,700&family=Roboto:wght@300&family=Rubik+Iso&display=swap');
 body {
-    margin: 0;
-    padding: 0;
+    background-color: black;
     font-family: 'Roboto', sans-serif;
 }
 header {
@@ -22,17 +22,6 @@ header > a:hover {
     color: #F0F0F0;
 }
 
-main {
-    background-color: rgba(239,221,195,255);
-    background-image: url("../img/artist-background-image.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
 footer {
     display: flex;
     background-color: black; 
@@ -41,8 +30,6 @@ footer {
     padding-left: 1vw;
     padding-right: 1vw;
     align-items: center;
-    margin-bottom: -100px;
-    height: 10vh;
 }
 
 footer> div {
