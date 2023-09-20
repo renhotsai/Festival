@@ -51,24 +51,44 @@
       
         // Specify the maximum zoom of the map
         maxZoom: 19,
-      
+            
         // Set the attribution for OpenStreetMaps
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-      
+
+        let locations = [
+            ["comedyToronto", 43.708650, -79.398320],
+            ["comedyDanforthBar", 43.689630, -79.296360],
+            ["comedyDanforthMusic", 40.696670, -74.091970],
+            ["comedyDanforthSoCap", 40.697109, -74.091568],
+            ["comedyWenonaCraft", 43.660438, -79.432812],
+            ["comedyBarCabaret", 43.661976, -79.427093],
+            ["comedyTallBoys", 43.662609, -79.423848],
+            ["comedyTheLabs", 43.665661, -79.407560],
+            ["comedyTheLoyal", 43.655466, -79.414624],
+            ["comedyNothingFancy", 43.656951, -79.403240],
+            ["comedyTheGarrison", 43.649217, -79.422397],
+            ["comedyCivilian", 43.646327, -79.409942],
+            ["comedyRivoli", 43.649378, -79.394955],
+            ["comedyYukYuk", 43.649879, -79.388324],
+            ["comedyElginTheatre", 43.653248, -79.378903],
+            ["comedyCBC", 43.644858, -79.388745],
+            ["comedyBerczyPark", 43.647879, -79.374110],
+            ["comedyMeridianHall", 43.646108, -79.377643],
+            ["comedyScotiaBank", 43.643305, -79.379657],
+            ["comedySecondCity", 43.641516, -79.380033]
+        ];
+
         // Set the view of the map
         // with the latitude, longitude and the zoom value
-        map.setView([48.8584, 2.2945], 16);
-          
-        // Set the map view to the user's location
-        // Uncomment below to set map according to user location
-        // map.locate({setView: true, maxZoom: 16});
-      
-        // Show a market at the position of the Eiffel Tower
-        let eiffelMarker = L.marker([48.8584, 2.2945]).addTo(map);
-      
-        // Bind popup to the marker with a popup
-        eiffelMarker.bindPopup("Eiffel Tower").openPopup();
+        map.setView([43.653248, -79.378903], 12);
+
+        for (let i = 0; i < locations.length; i++) {
+        marker = new L.marker([locations[i][1], locations[i][2]])
+            .bindPopup(locations[i][0])
+            .addTo(map);
+        }
+
     </script>
 </body>
 </html>
