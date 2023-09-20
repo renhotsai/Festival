@@ -47,7 +47,7 @@ individualTicketList.forEach(ticket => {
     const ticketContainer = `
 <div class="ticketInfo">
 <p class="ticketContent">${ticket.info1}</p>
-<p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:red">${ticket.cent}</sup><sup>*</sup></p>
+<p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
 <a href="#" class="btn_buy">Buy</a>
 </div>`;
     document.getElementById("indexTicket").innerHTML += ticketContainer;

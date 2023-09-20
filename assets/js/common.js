@@ -34,19 +34,19 @@ let footerTag = `
   alt="hahahaIcon"
   style="width: 120px"
 />
-<p>HAHAHA.COM</p>
+<p id="haName">HAHAHA.COM</p>
 </div>
-<div style="display: flex; flex-direction: column; padding-top:30px;">
-<div style="display: flex; justify-content: space-around;">`
-for (footerItem of footerItems) {
-    footerTag += `<a href= "${footerItem.uri}"
- >${footerItem.icon}</a>`
-}
-footerTag +=
+<div style="display: flex; flex-direction: column;">
+    <div>
+        <p>MORE FUNNY IN MANY MORE PLACES</p>
+    </div>
+    <div style="display: flex; justify-content: space-around;">`
+    for (footerItem of footerItems) {
+        footerTag += `<a href= "${footerItem.uri}"
+     >${footerItem.icon}</a>`
+    } 
+    footerTag +=
     `</div>
-<div>
-  <p>MORE FUNNY IN MANY MORE PLACES</p>
-</div>
 </div>
 `
 document.querySelector("footer").innerHTML = footerTag;
