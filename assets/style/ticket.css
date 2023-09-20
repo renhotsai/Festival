@@ -12,9 +12,10 @@ body > div {
     background-color: black;
     color: white;
     font-weight: bold;
+    font-size: 20px;
     padding: 10px;
     margin: 20px auto;
-    width: 200px;
+    width: 20%;
     display: block;
     text-decoration: none;
 }
@@ -22,6 +23,24 @@ body > div {
     background-color: white;
     border: black 1px solid;
     color: black;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+main > p {
+    font-size: 25px;
+    font-style: italic;
+}
+section > p {
+    font-size: 25px;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
 }
 
 section > div {
@@ -51,6 +70,8 @@ section >div > div{
     padding: 10px;
     font-weight: bold;
     text-decoration: none;
+    font-size: 30px;
+    width: 20%;
 }
 
 .learnMore:hover{
