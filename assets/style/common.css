@@ -45,3 +45,56 @@ footer> div {
 #haName {
     font-style: italic;
 }
+
+
+/* Ticket */
+.ticketArea {
+    background-image: url(https://drupal.hahaha.com/sites/default/files/2023-08/jflTO_passes_section_bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+    margin:50px auto;
+    text-align: center;
+} 
+
+.ticketName {
+    background-color: black;
+    color: white;
+    margin: 0 auto;padding: 5px;
+}
+
+.ticketInfo{
+    background-color: white;
+    width: 300px;
+    margin: 20px;
+}
+
+.ticketInfo > .amt {
+    color:#D80032;
+    font-size: 60px;
+    margin:0px auto;
+}
+.ticketInfo > .amt > sup {
+    color: black;
+    font-size: 30px;
+}
+
+.btn_buy {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin: 20px;
+}
+
+.btn_buy:hover {
+    background-color: #D80032;
+}
+
+.ticketContent {
+    font-weight: bold;
+    font-size: 18px;
+}
