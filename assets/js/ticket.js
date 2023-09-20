@@ -17,6 +17,32 @@ const individualTicketList = [
 
 const ticketPage = "./view/ticket.html"
 
+const ticketTypes = [
+    { id: "headLiner", name: "THE HEADLINER PASSES", list: headLinerList },
+    { id: "classicPass", name: "THE CLASSIC PASS", list: classicPassList },
+    { id: "individualTicket", name: "INDIVIDUAL TICKETS", list: individualTicketList }
+];
+
+
+const ticketTypeOption = () => {
+    document.getElementById("").innerHTM = "";
+    ticketTypes.forEach(ticketType => {
+        document.getElementById("").innerHTML += `<option value="${ticketType.id}">${ticketType.name}</option>`
+    });
+}
+
+const changeOption = (id) => {
+    document.getElementById("").innerHTML = "";
+    ticketTypes.forEach(ticketType => {
+        if (ticketType.id === id) {
+            ticketType.list.forEach(ticket => {
+                document.getElementById("").innerHTML += `<option value="${ticket.index}">${ticket.name}</option>`
+            });
+        }
+    });
+}
+
+
 
 const headLinerTickets = () => {
 
@@ -70,27 +96,3 @@ const allTickets = () => {
 }
 
 
-const ticketTypes = [
-    { id: headLiner, name: "THE HEADLINER PASSES", list: headLinerList },
-    { id: classicPass, name: "THE CLASSIC PASS", list: classicPassList },
-    { id: individualTicket, name: "INDIVIDUAL TICKETS", list: individualTicketList }
-];
-
-
-const ticketTypeOption = () => {
-    document.getElementById("").innerHTM = "";
-    ticketTypes.forEach(ticketType => {
-        document.getElementById("").innerHTML += `<option value="${ticketType.id}">${ticketType.name}</option>`
-    });
-}
-
-const changeOption = (id) => {
-    document.getElementById("").innerHTML = "";
-    ticketTypes.forEach(ticketType => {
-        if (ticketType.id === id) {
-            ticketType.list.forEach(ticket => {
-                document.getElementById("").innerHTML += `<option value="${ticket.index}">${ticket.name}</option>`
-            });
-        }
-    });
-}
