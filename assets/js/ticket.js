@@ -10,7 +10,7 @@ const classicPassList = [
     { name: "Classic 6 Credit Pass", info1: "6 Credits for The 42", amt: 119 }
 ];
 
-const individualTicketList = [{ info1: "Single Tickets Starting At", amt: 39, cent: 50 }];
+const individualTicketList = [{ name:"Individual Ticket",info1: "Single Tickets Starting At", amt: 39, cent: 50 }];
 
 
 const headLinerTickets = () =>{
@@ -49,6 +49,7 @@ document.getElementById("individualTickets").innerHTML = "";
 individualTicketList.forEach(ticket => {
     const ticketContainer = `
 <div class="ticketInfo">
+<p class="ticketName">${ticket.name}</p>
 <p class="ticketContent">${ticket.info1}</p>
 <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
 <a href="#" class="btn_buy">Buy</a>
@@ -83,6 +84,7 @@ const everyFirstTicket = (idName)=>{
     </div>`;
     const ticketContainer3 = `
     <div class="ticketInfo">
+    <p class="ticketName">${individualTicketList[0].name}</p>
     <p class="ticketContent">${individualTicketList[0].info1}</p>
     <p class="amt"><sup>$</sup>${individualTicketList[0].amt}<sup style="color:#D80032">${individualTicketList[0].cent}</sup><sup>*</sup></p>
     <a href="#" class="btn_buy">Buy</a>
