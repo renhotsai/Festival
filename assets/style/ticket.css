@@ -113,3 +113,7 @@ section >div > div{
     color: black;
     font-size: 30px;
 }
+
+div {
+    flex: 1;
+}
