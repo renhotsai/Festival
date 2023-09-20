@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
     <link rel="stylesheet" href="./assets/style/common.css">
     <link rel="stylesheet" href="./assets/style/main.css">
-    <script src="https://kit.fontawesome.com/1ed057f542.js" crossorigin="anonymous"></script>
+
     <script src="./assets/js/common.js" defer="true"></script>
+    <script src="./assets/js/ticket.js"></script>
 </head>
+
 <body>
     <header>
     </header>
     <main>
-        <h1>
-            JUST FOR LAUGHS
-            <img src="./assets/img/laughing.png" alt="laughing image" width="35px" height="35px" />
-        </h1>
-        <h2>SEPT 21-30, 2023</h2>
-        <h2>Toronto, ON</h2>
+        <div>
+            <h1>
+                JUST FOR LAUGHS (Comedy Festival)
+                <img src="./assets/img/laughing.png" alt="laughing image" width="35px" height="35px" />
+            </h1>
+            <h2>SEPT 21-30, 2023</h2>
+            <h2>Toronto, ON </h2>
+        </div>
     </main>
     <!-- Tickets and Pricing Section -->
+    
     <section>
-        
+        <div id="individualTickets"></div>
     </section>
 
     <!-- Map section -->
@@ -37,21 +43,22 @@
         <p>copyright</p>
         <a href="#">links</a>
     </footer>
+
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     <script>
         // Initialize the map
         const map = L.map('map')
-      
+
         // Get the tile layer from OpenStreetMaps
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      
-        // Specify the maximum zoom of the map
-        maxZoom: 19,
-            
-        // Set the attribution for OpenStreetMaps
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
+            // Specify the maximum zoom of the map
+            maxZoom: 19,
+
+            // Set the attribution for OpenStreetMaps
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
         let locations = [
@@ -74,19 +81,19 @@
             ["comedyBerczyPark", "49 Front St E, Toronto, ON M5E, Canada.", 43.647879, -79.374110],
             ["comedyMeridianHall", "1 Front St E, Toronto, ON M5E 1B2.", 43.646108, -79.377643],
             ["comedyScotiaBank", "40 Bay St., Toronto, ON M5J 2X2.", 43.643305, -79.379657],
-            ["comedySecondCity", "One York Street, 110 Harbour St, Toronto, ON M5J 0B6.",43.641516, -79.380033]
+            ["comedySecondCity", "One York Street, 110 Harbour St, Toronto, ON M5J 0B6.", 43.641516, -79.380033]
         ];
 
         // Set the view of the map
         // with the latitude, longitude and the zoom value
-        map.setView([43.653248, -79.378903], 12);
+        map.setView([43.658248, -79.378903], 12);
 
         for (let i = 0; i < locations.length; i++) {
-        marker = new L.marker([locations[i][2], locations[i][3]])
-            .bindPopup(`<h2>${locations[i][0]}</h2><p>${locations[i][1]}</p>`)
-            .addTo(map);
+            marker = new L.marker([locations[i][2], locations[i][3]])
+                .bindPopup(`<h2>${locations[i][0]}</h2><p>${locations[i][1]}</p>`)
+                .addTo(map);
         }
-
     </script>
 </body>
+
 </html>
