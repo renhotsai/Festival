@@ -3,7 +3,7 @@ const headerItems = [
     { name: "Home", uri: "../index.html" },
     { name: "Details", uri: "/view/details.html" },
     { name: "Tickets", uri: "/view/ticket.html" },
-    { name: "Contact", uri: "#"}
+    { name: "Contact", uri: "/view/contact.html"},
 ];
 
 let headerTag;
