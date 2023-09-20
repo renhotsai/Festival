@@ -10,63 +10,61 @@ const classicPassList = [
     { name: "Classic 6 Credit Pass", info1: "6 Credits for The 42", amt: 119 }
 ];
 
-const individualTicketList = [{ name:"Individual Ticket",info1: "Single Tickets Starting At", amt: 39, cent: 50 }];
+const individualTicketList = [{ name: "Individual Ticket", info1: "Single Tickets Starting At", amt: 39, cent: 50 }];
 
 
-const headLinerTickets = () =>{
+const headLinerTickets = () => {
 
-document.getElementById("headLinerTicket").innerHTML = "";
-headLinerList.forEach(ticket => {
-    const ticketContainer = `
-<div class="ticketInfo">
-<p class="ticketName">${ticket.name}</p>
-<p class="ticketContent">${ticket.info1}</p>
-<p class="ticketContent">${ticket.info2}</p>
-<p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-<a href="#" class="btn_buy">Buy</a>
-</div>`;
-    document.getElementById("headLinerTicket").innerHTML += ticketContainer;
-});
+    document.getElementById("headLinerTicket").innerHTML = "";
+    headLinerList.forEach(ticket => {
+        const ticketContainer = `
+        <div class="ticketInfo">
+        <p class="ticketName">${ticket.name}</p>
+        <p class="ticketContent">${ticket.info1}</p>
+        <p class="ticketContent">${ticket.info2}</p>
+        <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
+        <a href="#" class="btn_buy">Buy</a>
+        </div>`;
+        document.getElementById("headLinerTicket").innerHTML += ticketContainer;
+    });
 }
-const classicPasses =()=>{
+const classicPasses = () => {
 
-document.getElementById("classicPasses").innerHTML = "";
-classicPassList.forEach(ticket => {
-    const ticketContainer = `
-<div class="ticketInfo">
-<p class="ticketName">${ticket.name}</p>
-<p class="ticketContent">${ticket.info1}</p>
-<p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-<a href="#" class="btn_buy">Buy</a>
-</div>`;
-    document.getElementById("classicPasses").innerHTML += ticketContainer;
-});
-}
-
-const individualTickets =()=>{
-
-document.getElementById("individualTickets").innerHTML = "";
-individualTicketList.forEach(ticket => {
-    const ticketContainer = `
-<div class="ticketInfo">
-<p class="ticketName">${ticket.name}</p>
-<p class="ticketContent">${ticket.info1}</p>
-<p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
-<a href="#" class="btn_buy">Buy</a>
-</div>`;
-    document.getElementById("individualTickets").innerHTML += ticketContainer;
-});
+    document.getElementById("classicPasses").innerHTML = "";
+    classicPassList.forEach(ticket => {
+        const ticketContainer = `
+        <div class="ticketInfo">
+        <p class="ticketName">${ticket.name}</p>
+        <p class="ticketContent">${ticket.info1}</p>
+        <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
+        <a href="#" class="btn_buy">Buy</a>
+        </div>`;
+        document.getElementById("classicPasses").innerHTML += ticketContainer;
+    });
 }
 
-const allTickets =()=>{
+const individualTickets = () => {
+
+    document.getElementById("individualTickets").innerHTML = "";
+    individualTicketList.forEach(ticket => {
+        const ticketContainer = `
+        <div class="ticketInfo">
+        <p class="ticketName">${ticket.name}</p>
+        <p class="ticketContent">${ticket.info1}</p>
+        <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
+        <a href="#" class="btn_buy">Buy</a>
+        </div>`;
+        document.getElementById("individualTickets").innerHTML += ticketContainer;
+    });
+}
+
+const allTickets = () => {
     headLinerTickets();
     classicPasses();
     individualTickets();
 }
 
-
-
-const everyFirstTicket = (idName)=>{
+const everyFirstTicket = (idName) => {
     const ticketContainer1 = `
     <div class="ticketInfo">
     <p class="ticketName">${headLinerList[0].name}</p>
@@ -89,7 +87,7 @@ const everyFirstTicket = (idName)=>{
     <p class="amt"><sup>$</sup>${individualTicketList[0].amt}<sup style="color:#D80032">${individualTicketList[0].cent}</sup><sup>*</sup></p>
     <a href="#" class="btn_buy">Buy</a>
     </div>`;
-    document.getElementById(idName).innerHTML = ticketContainer1+ticketContainer2+ticketContainer3;
+    document.getElementById(idName).innerHTML = ticketContainer1 + ticketContainer2 + ticketContainer3;
 }
 
 
