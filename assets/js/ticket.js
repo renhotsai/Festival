@@ -42,7 +42,7 @@ classicPassList.forEach(ticket => {
 
 
 
-document.getElementById("indexTicket").innerHTML = "";
+document.getElementById("individualTickets").innerHTML = "";
 individualTicketList.forEach(ticket => {
     const ticketContainer = `
 <div class="ticketInfo">
@@ -50,7 +50,7 @@ individualTicketList.forEach(ticket => {
 <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
 <a href="#" class="btn_buy">Buy</a>
 </div>`;
-    document.getElementById("indexTicket").innerHTML += ticketContainer;
+    document.getElementById("individualTickets").innerHTML += ticketContainer;
 });
 
 
