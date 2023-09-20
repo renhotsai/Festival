@@ -13,6 +13,8 @@ const classicPassList = [
 const individualTicketList = [{ info1: "Single Tickets Starting At", amt: 39, cent: 50 }];
 
 
+const headLinerTickets = () =>{
+
 document.getElementById("headLinerTicket").innerHTML = "";
 headLinerList.forEach(ticket => {
     const ticketContainer = `
@@ -25,7 +27,8 @@ headLinerList.forEach(ticket => {
 </div>`;
     document.getElementById("headLinerTicket").innerHTML += ticketContainer;
 });
-
+}
+const classicPasses =()=>{
 
 document.getElementById("classicPasses").innerHTML = "";
 classicPassList.forEach(ticket => {
@@ -38,9 +41,9 @@ classicPassList.forEach(ticket => {
 </div>`;
     document.getElementById("classicPasses").innerHTML += ticketContainer;
 });
+}
 
-
-
+const individualTickets =()=>{
 
 document.getElementById("individualTickets").innerHTML = "";
 individualTicketList.forEach(ticket => {
@@ -52,9 +55,39 @@ individualTicketList.forEach(ticket => {
 </div>`;
     document.getElementById("individualTickets").innerHTML += ticketContainer;
 });
+}
+
+const allTickets =()=>{
+    headLinerTickets();
+    classicPasses();
+    individualTickets();
+}
 
 
 
-
+const everyFirstTicket = (idName)=>{
+    const ticketContainer1 = `
+    <div class="ticketInfo">
+    <p class="ticketName">${headLinerList[0].name}</p>
+    <p class="ticketContent">${headLinerList[0].info1}</p>
+    <p class="ticketContent">${headLinerList[0].info2}</p>
+    <p class="amt"><sup>$</sup>${headLinerList[0].amt}<sup>*</sup></p>
+    <a href="#" class="btn_buy">Buy</a>
+    </div>`;
+    const ticketContainer2 = `
+    <div class="ticketInfo">
+    <p class="ticketName">${classicPassList[0].name}</p>
+    <p class="ticketContent">${classicPassList[0].info1}</p>
+    <p class="amt"><sup>$</sup>${classicPassList[0].amt}<sup>*</sup></p>
+    <a href="#" class="btn_buy">Buy</a>
+    </div>`;
+    const ticketContainer3 = `
+    <div class="ticketInfo">
+    <p class="ticketContent">${individualTicketList[0].info1}</p>
+    <p class="amt"><sup>$</sup>${individualTicketList[0].amt}<sup style="color:#D80032">${individualTicketList[0].cent}</sup><sup>*</sup></p>
+    <a href="#" class="btn_buy">Buy</a>
+    </div>`;
+    document.getElementById(idName).innerHTML = ticketContainer1+ticketContainer2+ticketContainer3;
+}
 
 
