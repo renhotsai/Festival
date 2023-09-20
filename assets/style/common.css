@@ -42,6 +42,7 @@ footer {
     padding-right: 1vw;
     align-items: center;
     margin-bottom: -100px;
+    height: 10vh;
 }
 
 footer> div {

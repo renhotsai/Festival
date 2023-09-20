@@ -1,0 +1,73 @@
+body {
+    text-align: center;
+}
+
+#allShow {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px auto;
+    width: 200px;
+    display: block;
+    text-decoration: none;
+}
+
+section > div {
+    background-image: url(https://drupal.hahaha.com/sites/default/files/2023-08/jflTO_passes_section_bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+    margin: 0 auto;
+} 
+
+section >div > div{
+    background-color: white;
+    width: 300px;
+    margin: 20px;
+}
+.ticketName {
+    background-color: black;
+    color: white;
+    margin: 0 auto;padding: 5px;
+}
+
+#FAQ{
+    margin: 50px;
+}
+
+.learnMore {
+    background-color: red;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn_buy {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin: 20px;
+}
+
+.ticketContent {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+.ticketInfo > .amt {
+    color:red;
+    font-size: 60px;
+    margin:0px auto;
+}
+.ticketInfo > .amt > sup {
+    color: black;
+    font-size: 30px;
+}
