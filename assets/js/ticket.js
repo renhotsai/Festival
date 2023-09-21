@@ -76,21 +76,36 @@ if (document.getElementById("submit-btn") !== null) {
 }
 
 
+const individualTicketList = [
+    { id: 1, name: "Single Tickets ($39.5)", info1: "Single Tickets Starting At", amt: 39, cent: 50, total: 39.50 }
+];
+
 const headLinerList = [
-    { id: 1, name: "Headliner Pass + 2 Credits", info1: "1 Headliner Ticket", info2: "2 Credits for The 42", amt: 94, cent: 0, total: 94 },
-    { id: 2, name: "Headliner Pass + 6 Credits", info1: "1 Headliner Ticket, with great seats!", info2: "6 Credits for The 42", amt: 144, cent: 0, total: 144 },
-    { id: 3, name: "Headliner Pass + 12 Credits", info1: "1 Headliner Ticket, with FANTASTIC seats!", info2: "12 Credits for The 42", amt: 204, cent: 0, total: 204 }
+    { id: 5, name: "Headliner Pass + 2 Credits ($94)", info1: "1 Headliner Ticket", info2: "2 Credits for The 42", amt: 94, cent: 0, total: 94 },
+    { id: 6, name: "Headliner Pass + 6 Credits ($144)", info1: "1 Headliner Ticket, with great seats!", info2: "6 Credits for The 42", amt: 144, cent: 0, total: 144 },
+    { id: 7, name: "Headliner Pass + 12 Credits ($204)", info1: "1 Headliner Ticket, with FANTASTIC seats!", info2: "12 Credits for The 42", amt: 204, cent: 0, total: 204 }
 ];
 
 const classicPassList = [
-    { id: 4, name: "Classic 2 Credit Pass", info1: "2 Credits for The 42", amt: 69, cent: 0, total: 69 },
-    { id: 5, name: "Classic 4 Credit Pass", info1: "4 Credits for The 42", amt: 99, cent: 0, total: 99 },
-    { id: 6, name: "Classic 6 Credit Pass", info1: "6 Credits for The 42", amt: 119, cent: 0, total: 119 }
+    { id: 2, name: "Classic 2 Credit Pass ($69)", info1: "2 Credits for The 42", amt: 69, cent: 0, total: 69 },
+    { id: 3, name: "Classic 4 Credit Pass ($99)", info1: "4 Credits for The 42", amt: 99, cent: 0, total: 99 },
+    { id: 4, name: "Classic 6 Credit Pass ($119)", info1: "6 Credits for The 42", amt: 119, cent: 0, total: 119 }
 ];
 
-const individualTicketList = [
-    { id: 7, name: "INDIVIDUAL TICKETS", info1: "Single Tickets Starting At", amt: 39, cent: 50, total: 39.50 }
-];
+
+const individualTickets = () => {
+
+    document.getElementById("individualTickets").innerHTML = "";
+    individualTicketList.forEach(ticket => {
+        const ticketContainer = `
+                                <div class="ticketInfo">
+                                <p class="ticketContent">${ticket.info1}</p>
+                                <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
+                                <a href="#" class="btn_buy">Buy</a>
+                                </div>`;
+        document.getElementById("individualTickets").innerHTML += ticketContainer;
+    });
+}
 
 
 const headLinerTickets = () => {
@@ -123,30 +138,17 @@ const classicPasses = () => {
     });
 }
 
-const individualTickets = () => {
-
-    document.getElementById("individualTickets").innerHTML = "";
-    individualTicketList.forEach(ticket => {
-        const ticketContainer = `
-                                <div class="ticketInfo">
-                                <p class="ticketContent">${ticket.info1}</p>
-                                <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
-                                <a href="#" class="btn_buy">Buy</a>
-                                </div>`;
-        document.getElementById("individualTickets").innerHTML += ticketContainer;
-    });
-}
 
 const allTickets = () => {
-    headLinerTickets();
-    classicPasses();
     individualTickets();
+    classicPasses();
+    headLinerTickets();
 }
 
 const ticketTypes = [
-    { id: "headLiner", name: "THE HEADLINER PASSES", list: headLinerList },
+    { id: "individualTicket", name: "INDIVIDUAL TICKETS", list: individualTicketList },
     { id: "classicPass", name: "THE CLASSIC PASS", list: classicPassList },
-    { id: "individualTicket", name: "INDIVIDUAL TICKETS", list: individualTicketList }
+    { id: "headLiner", name: "THE HEADLINER PASSES", list: headLinerList },
 ];
 
 
