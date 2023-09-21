@@ -83,7 +83,7 @@ const calTicket = () => {
     let outputData = ``;
     let ticketAmt = 0;
 
-    if(ticket_quantity === ""){
+    if(ticket_quantity<= 0){
         outputData += `<p style="color: red;"> Error: Minimum ticket quantity is 1!</p>`;
         document.getElementById("order-summary").innerHTML = outputData;
         return;
