@@ -72,8 +72,6 @@ const calTicket = () => {
     document.getElementById("order-summary").innerHTML = outputData;
 }
 
-document.getElementById("submit-btn").addEventListener("click", calTicket); 
-document.getElementById("ticket-type").addEventListener("change", ticketNameGenerate); 
 
 const headLinerList = [
     { id: 1, name: "Headliner Pass + 2 Credits", info1: "1 Headliner Ticket", info2: "2 Credits for The 42", amt: 94, cent: 0, total: 94 },
@@ -168,5 +166,3 @@ const changeOption = () => {
         }
     });
 }
-window.addEventListener("load",ticketTypeOption);
-document.getElementById("ticket-type").addEventListener("change",changeOption);
