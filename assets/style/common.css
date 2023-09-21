@@ -1,100 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&family=Roboto:wght@300&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Fredoka', sans-serif;
-    background-color: #F9DEC9;
+  margin: 0;
+  padding: 0;
+  font-family: "Fredoka", sans-serif;
+  background-color: #f9dec9;
 }
 header {
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    background-color: #fc301e;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background-color: #fc301e;
 }
 
 header > a {
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
 }
 
 header > a:hover {
-    color: #F0F0F0;
+  color: #f0f0f0;
 }
-
 
 footer {
-    display: flex;
-    background-color: black; 
-    color: white;
-    justify-content: space-between;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    align-items: center;
-    padding-bottom: 10px;
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
-footer> div {
-    display: flex;
-    gap: 10px;
+footer > div {
+  display: flex;
+  gap: 10px;
 }
 
-#haName {
-    font-style: italic;
+#copyright {
+  font-style: italic;
+  font-size: 0.4em;
+  padding: 0 0 0.5em 4em;
 }
 
+#copyright > a:hover {
+  color: white;
+}
+#copyright > a {
+  color: #fc301e;
+}
 
 /* Ticket */
 .ticketArea {
-    background-image: url(https://drupal.hahaha.com/sites/default/files/2023-08/jflTO_passes_section_bg2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-around;
-    width: fit-content;
-    margin:50px auto;
-    text-align: center;
-} 
-
-.ticketName {
-    background-color: black;
-    color: white;
-    margin: 0 auto;padding: 5px;
+  background-image: url(https://drupal.hahaha.com/sites/default/files/2023-08/jflTO_passes_section_bg2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  width: fit-content;
+  margin: 50px auto;
+  text-align: center;
 }
 
-.ticketInfo{
-    background-color: white;
-    width: 300px;
-    margin: 20px;
+.ticketName {
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.ticketInfo {
+  background-color: white;
+  width: 300px;
+  margin: 20px;
 }
 
 .ticketInfo > .amt {
-    color:#D80032;
-    font-size: 60px;
-    margin:0px auto;
+  color: #d80032;
+  font-size: 60px;
+  margin: 0px auto;
 }
 .ticketInfo > .amt > sup {
-    color: black;
-    font-size: 30px;
+  color: black;
+  font-size: 30px;
 }
 
 .btn_buy {
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 10px;
-    margin: 20px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin: 20px;
 }
 
 .btn_buy:hover {
-    background-color: #D80032;
+  background-color: #d80032;
 }
 
 .ticketContent {
-    font-weight: bold;
-    font-size: 18px;
+  font-weight: bold;
+  font-size: 18px;
 }
