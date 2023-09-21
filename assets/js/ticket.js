@@ -54,11 +54,19 @@ const calTicket = () => {
         const tax = subtotal * 0.13; 
         const final_price = subtotal + tax; 
     
-        outputData += `<p> Number of tickets: ${ticket_quantity}</p>
-                       <p> Price per ticket: $${ticket_price}</p>
-                       <p> Subtotal: $${subtotal}</p>
-                       <p> Tax (13%): $${tax.toFixed(2)}</p>
-                       <p> Final Price: $${final_price}</p>`    
+        outputData += `<div style="display: flex; 
+                                   flex-direction: column; 
+                                   border: 2px solid black; 
+                                   background-color: #F1EFEF;
+                                   padding: 30px;
+                                   margin-top: 15px">
+                        <h2> Transaction receipt </h2>
+                        <p> Number of tickets: ${ticket_quantity}</p>
+                        <p> Price per ticket: $${ticket_price.toFixed(2)}</p>
+                        <p> Subtotal: $${subtotal.toFixed(2)}</p>
+                        <p> Tax (13%): $${tax.toFixed(2)}</p>
+                        <p> Final Price: $${final_price.toFixed(2)}</p>
+                       </div>`    
     }
 
     document.getElementById("order-summary").innerHTML = outputData;
