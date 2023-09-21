@@ -15,6 +15,7 @@ section {
   gap: 1em;
   margin: 2em 0;
   padding: 0.2em;
+
   border-bottom: 1px solid #212224ab;
 }
 .container {
@@ -23,6 +24,7 @@ section {
   grid-auto-flow: column;
   grid-auto-columns: 26%;
   gap: 1em;
+
   color: #fff;
   align-items: center;
 
@@ -31,6 +33,7 @@ section {
   overscroll-behavior-inline: contain;
 
   /* Snap in line */
+
   scroll-snap-type: x mandatory;
   scroll-padding-inline: 1em;
 
@@ -41,6 +44,7 @@ section {
 /* to hide scrollbar of browser */
 .container::-webkit-scrollbar {
   display: none;
+
 }
 
 img {
@@ -92,9 +96,12 @@ figcaption a {
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+
   color: white;
   background-color: #fc301e;
   font-size: 0.8em;
+
+
   border-radius: 0.3em;
   padding: 2% 0.5%;
   margin: 0 5% 2% 50%;
@@ -132,6 +139,7 @@ figure:hover img {
 figure:hover {
   border: 2px solid rgb(255, 255, 255);
 }
+
 
 figcaption a:hover {
   background-color: white;
@@ -194,6 +202,8 @@ ion-icon {
   visibility: visible;
   opacity: 1;
 }
+
+
 
 /* header and footer */
 /* integration  */
