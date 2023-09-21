@@ -4,23 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Purchase Ticket</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="../assets/style/common.css" />
-    <script
-      src="https://kit.fontawesome.com/1ed057f542.js"
-      crossorigin="anonymous"
-    ></script>
     <script src="../assets/js/common.js" defer="true"></script>
     <link rel="stylesheet" href="../assets/style/ticket.css" />
     <script src="../assets/js/ticket.js" defer="true"></script>
+
   </head>
-  <body onload="allTickets()">
+
+  <body>
     <header></header>
+    <div id="ticket-form-container">
+      <h1 id="ticket-title">Ticket Purchase</h1>
+      <form>
+        <label for="ticket-type">Choose the ticket type</label>
+        <select id="ticket-type"></select>
+        <label for="ticket-name">Choose the ticket name</label>
+        <select id="ticket-name">
+          <option value="single" selected>Single Ticket ($39.5)</option>
+        </select>
+
+        <label for="ticket-quantity">Enter the quantity of ticket </label>
+        <input
+          id="ticket-quantity"
+          type="number"
+          placeholder="Enter the quantity"
+          min=1
+        />
+        <label for="ticket-credit-info"
+          >Enter the credit card information</label
+        >
+        <input
+          id="ticket-credit-info"
+          type="number"
+          placeholder="Enter the card number"
+        />
+      </form>
+      <button id="submit-btn">Pay now</button>
+      <section id="order-summary"></section>
+    </div>
+
     <footer></footer>
   </body>
 </html>
+

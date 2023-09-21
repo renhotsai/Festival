@@ -7,9 +7,7 @@ main {
     display: flex; 
     flex-direction: column;
     justify-content: center;
-    flex: 1;
-    height: 50vh;
-    
+    height: 60vh;
 }
 
 main > div {
@@ -17,7 +15,7 @@ main > div {
 }
 
 #ticketSection {
-    background-color: white;
+    background-color: #FC87A2;
     padding-bottom: 30px;
     text-align: center;
 }

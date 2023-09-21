@@ -15,7 +15,8 @@
     <script src="./assets/js/ticket.js"></script>
 </head>
 
-<body onload="allTickets()">
+<body>
+
     <header>
     </header>
     <main>
@@ -28,10 +29,9 @@
             <h2>Toronto, ON </h2>
         </div>
     </main>
-
     <!-- Tickets and Pricing Section -->
     <div id="ticketSection">
-        <section>
+        <!-- <section>
           <img
             src="https://drupal.hahaha.com/sites/default/files/2023-06/JFLTO-23-0080-Pass-Page-Headliner_1200x600_2.png"
             alt="JFL Toronto headliners"
@@ -54,8 +54,10 @@
           </p>
           <h2>HOW IT WORKS?</h2>
           <a href="#" class="learnMore">LEARN MORE</a>
-        </section>
+        </section> -->
         <section>
+          <h2 style="padding-top: 100px;">TICKETS & PASSES</h2>
+          <p>Choose one of tickets or passes within various options</p>
           <h2>THE HEADLINER PASSES</h2>
           <p>
             We’ve made it super easy for you to get the best seats in the house,
@@ -90,7 +92,9 @@
           <a href="#" class="learnMore">LEARN MORE</a>
         </section>
       </div>
-
+      <script>
+        window.addEventListener("loadstart",allTickets());
+      </script>
     <!-- Map section -->
     <section style="display: flex; flex-direction: column; align-items: center;">
         <h1>Map for events: </h1>
