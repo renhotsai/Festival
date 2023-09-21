@@ -179,18 +179,21 @@ if (document.getElementById("ticket-type") !== null) {
     document.getElementById("ticket-type").addEventListener("change", changeOption);
 }
 
-const chooseTicket =()=>{
-    const search  =location.search.replace('?','').split('&')
-    search.forEach(param => {
-        if(param.split('=')[0]==="ticketType"){
-            document.getElementById("ticket-type").value = param.split('=')[1];
-        }else{
-            changeOption();
-            document.getElementById("ticket-name").value = param.split('=')[1];
-        }
-    });
+const chooseTicket = () => {
+    if (location.search !== '') {
+        const search = location.search.replace('?', '').split('&')
+
+        search.forEach(param => {
+            if (param.split('=')[0] === "ticketType") {
+                document.getElementById("ticket-type").value = param.split('=')[1];
+            } else {
+                changeOption();
+                document.getElementById("ticket-name").value = param.split('=')[1];
+            }
+        });
+    }
 }
-window.addEventListener("load",chooseTicket);
+window.addEventListener("load", chooseTicket);
 
 
 
