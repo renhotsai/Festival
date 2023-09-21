@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artists</title>
     <link rel="stylesheet" href="artistsStyles.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+
+    <script src="artists.js" defer></script>
   </head>
   <body>
     <main>
@@ -16,7 +30,11 @@
             that simple.
           </p>
         </div>
-        <div class="container">
+        <div class="container container-one">
+          <a class="scrollLeftButton hidden" id="left-btn-one" href="#">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          </a>
+
           <figure>
             <img
               src="https://drupal.hahaha.com/sites/default/files/2023-06/JTO-23-Website_ArtistMain_636x417_ANDREW%20SCHULZ_3.png"
@@ -111,6 +129,10 @@
               <a href="#">Book Now</a>
             </figcaption>
           </figure>
+
+          <a id="right-btn-one" class="scrollRightButton hidden" href="#">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          </a>
         </div>
       </section>
 
@@ -123,7 +145,10 @@
             show, perhaps? The 42’s got it.
           </p>
         </div>
-        <div class="container">
+        <div class="container container-two">
+          <a class="scrollLeftButton hidden" id="left-btn-two" href="#">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          </a>
           <figure>
             <img
               src="https://drupal.hahaha.com/sites/default/files/2023-05/ALISONLEIBY_636x417.png"
@@ -218,6 +243,9 @@
               <a href="#">Book Now</a>
             </figcaption>
           </figure>
+          <a id="right-btn-two" class="scrollRightButton hidden" href="#">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          </a>
         </div>
       </section>
 
@@ -230,7 +258,10 @@
             three-day outdoor comedy celebration has to offer.
           </p>
         </div>
-        <div class="container">
+        <div class="container container-three">
+          <a class="scrollLeftButton hidden" id="left-btn-three" href="#">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          </a>
           <figure>
             <img
               src="https://drupal.hahaha.com/sites/default/files/2023-08/JTO-23-Website_ArtistMain_636x417_REGGIE%20WATTS.png"
@@ -325,6 +356,9 @@
               <a href="#">Book Now</a>
             </figcaption>
           </figure>
+          <a id="right-btn-three" class="scrollRightButton hidden" href="#">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          </a>
         </div>
       </section>
     </main>
