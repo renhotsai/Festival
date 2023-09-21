@@ -26,7 +26,7 @@ const footerItems = [
     { name: "instagram", icon: `<i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>`, uri: `https://www.instagram.com/JFLtoronto` },
     { name: "facebook", icon: `<i class="fa-brands fa-facebook-f fa-2xl" style="color: #ffffff;"></i>`, uri: `https://www.facebook.com/JFLTORONTO` },
     { name: "youtube", icon: `<i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i>`, uri: `https://www.youtube.com/justforlaughs` },
-]
+];
 let footerTag = `
 <div style="align-items: end;">
 <img
