@@ -34,7 +34,7 @@ let footerTag = `
   alt="hahahaIcon"
   style="width: 120px"
 />
-<p id="haName">HAHAHA.COM</p>
+<p id="haName">Copyright &copy; 2023 HAHAHA.COM. All Rights Reserved</p>
 </div>
 <div style="display: flex; flex-direction: column;">
     <div>

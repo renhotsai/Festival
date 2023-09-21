@@ -70,3 +70,18 @@ main > div {
     color: #D80032;
 }
 
+/* Code for mapping */
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+#map {
+    width: 960px; 
+    height: 500px; 
+
+}
+
+
