@@ -1,8 +1,10 @@
 const calTicket = () => {
 
+    document.getElementById("order-summary").innerHTML = "";
     const ticket_quantity = document.getElementById("ticket-quantity").value;
     const ticketIndex = parseInt(document.getElementById("ticket-name").value);
     const ticket_credit_info = document.getElementById("ticket-credit-info").value;
+    const ticketType = document.getElementById("ticket-type").value;
 
     let outputData = ``;
     let ticketAmt = 0;
@@ -19,10 +21,8 @@ const calTicket = () => {
         return;
     }
 
-    switch (ticketIndex) {
-        case 1:
-        case 2:
-        case 3:
+    switch (ticketType) {
+        case "headLiner":
             headLinerList.forEach(ticket => {
                 if (ticket.id === ticketIndex) {
                     ticketAmt = ticket.total;
@@ -30,9 +30,7 @@ const calTicket = () => {
                 }
             });
             break;
-        case 4:
-        case 5:
-        case 6:
+        case "classicPass":
             classicPassList.forEach(ticket => {
                 if (ticket.id === ticketIndex) {
                     ticketAmt = ticket.total;
@@ -58,7 +56,8 @@ const calTicket = () => {
                                    background-color: #F1EFEF;
                                    padding: 30px;
                                    margin-top: 15px;
-                                   border-radius: 15px;">
+                                   border-radius: 15px;
+                                   width: max-content;">
                         <h2> Transaction receipt </h2>
                         <p>------------------------------</p>
                         <p> Number of tickets: ${ticket_quantity}</p>
@@ -68,7 +67,7 @@ const calTicket = () => {
                         <p> Final Price: $${final_price.toFixed(2)}</p>
                        </div>`
 
-    document.getElementById("order-summary").innerHTML = outputData;
+    document.getElementById("order").innerHTML = outputData;
 }
 
 if (document.getElementById("submit-btn") !== null) {
@@ -101,7 +100,7 @@ const individualTickets = () => {
                                 <div class="ticketInfo">
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
-                                <a href="#" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html?ticketType=individualTicket&ticketId=${ticket.id}" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("individualTickets").innerHTML += ticketContainer;
     });
@@ -118,7 +117,7 @@ const headLinerTickets = () => {
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="ticketContent">${ticket.info2}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-                                <a href="#" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html?ticketType=headLiner&ticketId=${ticket.id}" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("headLinerTicket").innerHTML += ticketContainer;
     });
@@ -132,7 +131,7 @@ const classicPasses = () => {
                                 <p class="ticketName">${ticket.name}</p>
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-                                <a href="#" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html?ticketType=classicPass&ticketId=${ticket.id}" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("classicPasses").innerHTML += ticketContainer;
     });
@@ -175,8 +174,26 @@ const changeOption = () => {
     });
 }
 
-
 window.addEventListener("load", ticketTypeOption);
 if (document.getElementById("ticket-type") !== null) {
     document.getElementById("ticket-type").addEventListener("change", changeOption);
 }
+
+const chooseTicket =()=>{
+    const search  =location.search.replace('?','').split('&')
+    search.forEach(param => {
+        if(param.split('=')[0]==="ticketType"){
+            document.getElementById("ticket-type").value = param.split('=')[1];
+        }else{
+            changeOption();
+            document.getElementById("ticket-name").value = param.split('=')[1];
+        }
+    });
+}
+window.addEventListener("load",chooseTicket);
+
+
+
+// ticketType
+
+// ticketId
