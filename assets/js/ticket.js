@@ -100,7 +100,7 @@ const individualTickets = () => {
                                 <div class="ticketInfo">
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
-                                <a href="../view/ticket.html" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html?ticketType=individualTicket&ticketId=${ticket.id}" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("individualTickets").innerHTML += ticketContainer;
     });
@@ -117,7 +117,7 @@ const headLinerTickets = () => {
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="ticketContent">${ticket.info2}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-                                <a href="../view/ticket.html" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html?ticketType=headLiner&ticketId=${ticket.id}" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("headLinerTicket").innerHTML += ticketContainer;
     });
@@ -131,7 +131,7 @@ const classicPasses = () => {
                                 <p class="ticketName">${ticket.name}</p>
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-                                <a href="../view/ticket.html" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html?ticketType=classicPass&ticketId=${ticket.id}" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("classicPasses").innerHTML += ticketContainer;
     });
@@ -174,8 +174,26 @@ const changeOption = () => {
     });
 }
 
-
 window.addEventListener("load", ticketTypeOption);
 if (document.getElementById("ticket-type") !== null) {
     document.getElementById("ticket-type").addEventListener("change", changeOption);
 }
+
+const chooseTicket =()=>{
+    const search  =location.search.replace('?','').split('&')
+    search.forEach(param => {
+        if(param.split('=')[0]==="ticketType"){
+            document.getElementById("ticket-type").value = param.split('=')[1];
+        }else{
+            changeOption();
+            document.getElementById("ticket-name").value = param.split('=')[1];
+        }
+    });
+}
+window.addEventListener("load",chooseTicket);
+
+
+
+// ticketType
+
+// ticketId
