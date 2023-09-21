@@ -1,21 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style/common.css">
-    <script src="https://kit.fontawesome.com/1ed057f542.js" crossorigin="anonymous"></script>
-    <script src="../assets/js/common.js" defer="true"></script>
-</head>
-<body>
-    <header>
-    </header>
-    <main></main>
-    <footer>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artists</title>
+    <link rel="stylesheet" href="artistsStyles.css" />
+
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+
+    <script src="artists.js" defer></script>
+
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <h2>HEADLINERS</h2>
+          <p>
+            Some of comedy’s biggest stars, at Toronto’s biggest venues! It’s
+            that simple.
+          </p>
+        </div>
+
+        <div class="container container-one">
+          <a class="scrollLeftButton hidden" id="left-btn-one" href="#">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          </a>
+
+
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-06/JTO-23-Website_ArtistMain_636x417_ANDREW%20SCHULZ_3.png"
+              alt="Andrew Schulz Image"
+            />
+            <figcaption>
+              <p>ANDREW SCHULZ: THE LIFE TOUR</p>
+              <time>SEP 29, 2023 - SEP 30, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/JTO-23-Website_ArtistMain_636x417_RONNY%20CHIENG.png"
+              alt="RONNY CHIENG Image"
+            />
+            <figcaption>
+              <p>RONNY CHIENG: JUST FOR TORONTO</p>
+              <time>SEP 23, 2023 - SEP 24, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-06/JTO-23-Website_ArtistMain_636x417_LESLIE%20JONES%20%281%29.png"
+              alt="LESLIE JONES Image"
+            />
+            <figcaption>
+              <p>LESLIE JONES</p>
+              <time>SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/OFFICELADIES_500x500.png"
+              alt="Office Ladies Image"
+            />
+            <figcaption>
+              <p>AN EVENING WITH THE OFFICE LADIES</p>
+              <time>SEP 21, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/JTO-23-Website_ArtistMain_636x417_JONATHAN%20VAN%20NESS.png"
+              alt="JONATHAN VAN NESS Image"
+            />
+            <figcaption>
+              <p>FUN & SLUTTY WITH JONATHAN VAN NESS</p>
+              <time>SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/JTO-23-Website_ArtistMain_636x417_MARLON%20WAYANS.png"
+              alt="Andrew Schulz Image"
+            />
+            <figcaption>
+              <p>MARLON WAYANS</p>
+              <time>SEP 30, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-06/JTO-23-Website_ArtistMain_636x417_SAM%20MORRIL.png"
+              alt="SAM MORRIL Image"
+            />
+            <figcaption>
+              <p>SAM MORRIL: THE CLASS ACT TOUR</p>
+              <time>SEP 21, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://s1.ticketm.net/dam/a/3cc/c6aa3ae2-5162-4d77-9a78-e3fcb65333cc_1833191_RETINA_PORTRAIT_3_2.jpg"
+              alt="GIGGLY SQUAD Image"
+            />
+            <figcaption>
+              <p>GIGGLY SQUAD LIVE</p>
+              <time>SEP 29, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+
+          <a id="right-btn-one" class="scrollRightButton hidden" href="#">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          </a>
+
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>THE 42</h2>
+          <p>
+            Want to discover someone new? See one of your all-time favourites
+            perform at one of Toronto’s premier venues? An intimate late-night
+            show, perhaps? The 42’s got it.
+          </p>
+        </div>
+
+        <div class="container container-two">
+          <a class="scrollLeftButton hidden" id="left-btn-two" href="#">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          </a>
+
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/ALISONLEIBY_636x417.png"
+              alt="ALISON LEIBY Image"
+            />
+            <figcaption>
+              <p>ALISON LEIBY: OH GOD, A SHOW ABOUT ABORTION</p>
+              <time>SEP 21, 2023 - SEP 24, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://www.austintheatre.org/wp-content/uploads/2023/02/Andrea-Jin_800x800.jpg"
+              alt="ANDREA JIN Image"
+            />
+            <figcaption>
+              <p>ANDREA JIN</p>
+              <time>SEP 21, 2023 - SEP 24, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-06/JameelaJamil_636x417.jpg"
+              alt="JAMEELA JAMIL Image"
+            />
+            <figcaption>
+              <p>BAD DATES WITH JAMEELA JAMIL</p>
+              <time>SEP 26, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://lyrictheatre.showare.com/uplimage/2024web=colinquinn.jpg"
+              alt="COLIN QUINN Image"
+            />
+            <figcaption>
+              <p>COLIN QUINN: SMALL TALK</p>
+              <time>SEP 28, 2023 - SEP 30, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/CHRISREDD_636x417_3.png"
+              alt="CHRIS REDD Image"
+            />
+            <figcaption>
+              <p>CHRIS REDD</p>
+              <time>SEP 27, 2023 - SEP 28, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/JTO-23-Website_ArtistMain_636x417_CATHERINE%20COHEN.png"
+              alt="CATHERINE COHEN Image"
+            />
+            <figcaption>
+              <p>CATHERINE COHEN: COME FOR ME</p>
+              <time>SEP 27, 2023 - SEP 30, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-05/JTO-23-Website_ArtistMain_636x417_DEANNE%20SMITH.png"
+              alt="DEANNE SMITH Image"
+            />
+            <figcaption>
+              <p>DEANNE SMITH</p>
+              <time>SEP 21, 2023 - SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/586c3046893fc03b140cc04b/61d5184b-746d-4bb6-9923-5a448fba4cc8/Ariel+Promo.JPG"
+              alt="COLIN QUINN Image"
+            />
+            <figcaption>
+              <p>ARIEL ELIAS</p>
+              <time>SEP 21, 2023 - SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <a id="right-btn-two" class="scrollRightButton hidden" href="#">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          </a>
+
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>STREET</h2>
+          <p>
+            Totally free, totally awesome & totally hilarious! DJs, bands, local
+            and international comedians are just the sparkly start of what our
+            three-day outdoor comedy celebration has to offer.
+          </p>
+        </div>
+
+        <div class="container container-three">
+          <a class="scrollLeftButton hidden" id="left-btn-three" href="#">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          </a>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-08/JTO-23-Website_ArtistMain_636x417_REGGIE%20WATTS.png"
+              alt="REGGIE WATTS Image"
+            />
+            <figcaption>
+              <p>REGGIE WATTS</p>
+              <time>SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-09/JTO-23-Website_ArtistMain_636x417_JINKX%20MONSOON.png"
+              alt="JINKX MONSOON Image"
+            />
+            <figcaption>
+              <p>JINKX MONSOON</p>
+              <time>SEP 24, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-08/JTO-23-Website_ArtistMain_636x417_FRED%20ARMISEN.png"
+              alt="FRED ARMISEN Image"
+            />
+            <figcaption>
+              <p>FRED ARMISEN: COMEDY FOR MUSICIANS</p>
+              <time>SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-09/JTO-23-Website_ArtistMain_636x417_ADIRA%20AMRAM.png"
+              alt="ADIRA AMRAM"
+            />
+            <figcaption>
+              <p>ADIRA AMRAM & THE EXPERIENCE</p>
+              <time>SEP 22, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-07/JTO-23-Website_ArtistMain_636x417_FRED%20PENNER.png"
+              alt="FRED PENNER"
+            />
+            <figcaption>
+              <p>FRED PENNER</p>
+              <time>SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-08/JTO-23-Website_ArtistMain_636x417_LUNA%20ELLE.png"
+              alt="LUNA ELLE"
+            />
+            <figcaption>
+              <p>LUNA ELLE</p>
+              <time>SEP 23, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-07/JTO-23-Website_ArtistMain_636x417_MYST%20MILANO.png"
+              alt="MYST MILANO"
+            />
+            <figcaption>
+              <p>MYST MILANO</p>
+              <time>SEP 24, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://drupal.hahaha.com/sites/default/files/2023-07/JTO-23-Website_ArtistMain_636x417_RUP%20LOOP.png"
+              alt="RUPLOOPS"
+            />
+            <figcaption>
+              <p>RUPLOOPS</p>
+              <time>SEP 24, 2023</time>
+              <a href="#">Book Now</a>
+            </figcaption>
+          </figure>
+
+          <a id="right-btn-three" class="scrollRightButton hidden" href="#">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          </a>
+
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
