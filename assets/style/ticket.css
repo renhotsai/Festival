@@ -2,7 +2,7 @@
 #ticket-form-container {
     display: flex;
     flex-direction: column; 
-    width: 15%;
+    width: 20%;
     margin: 0 auto;
     height: 85vh;
 }
@@ -14,15 +14,16 @@
 form {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 form > input {
     padding-left: 10px;
-    height: 25px;
+    height: 30px;
 }
 form > select {
     padding-left: 10px;
-    height: 30px;
+    height: 35px;
 }
 
 #order-summary {

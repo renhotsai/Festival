@@ -6,14 +6,12 @@ const headerItems = [
   { name: "Contact", uri: "/view/contact.html" },
 ];
 
-let headerTag;
+let headerTag = "";
 
 for (const headerItem of headerItems) {
-  if (headerTag === undefined) {
-    headerTag = `<a href="${headerItem.uri}">${headerItem.name}</a>`;
-  } else {
-    headerTag += `<a href="${headerItem.uri}">${headerItem.name}</a>`;
-  }
+    headerTag += `<ul>
+                    <li><a href="${headerItem.uri}">${headerItem.name}</a></li>
+                  </ul>`;  
 }
 
 document.querySelector("header").innerHTML = headerTag;
@@ -55,11 +53,11 @@ let footerTag = `
         <p>MORE FUNNY IN MANY MORE PLACES</p>
     </div>
     <div style="display: flex; justify-content: space-around;">`;
-for (footerItem of footerItems) {
-  footerTag += `<a href= "${footerItem.uri}"
-     >${footerItem.icon}</a>`;
-}
-footerTag += `</div>
-</div>
-`;
+    for (footerItem of footerItems) {
+    footerTag += `<a href= "${footerItem.uri}"
+        >${footerItem.icon}</a>`;
+    }
+    footerTag += `</div>
+    </div>
+    `;
 document.querySelector("footer").innerHTML = footerTag;
