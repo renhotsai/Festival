@@ -83,7 +83,7 @@ const calTicket = () => {
     let outputData = ``;
     let ticketAmt = 0;
 
-    if(ticket_quantity<= 0){
+    if (ticket_quantity <= 0) {
         outputData += `<p style="color: red;"> Error: Minimum ticket quantity is 1!</p>`;
         document.getElementById("order-summary").innerHTML = outputData;
         return;
@@ -145,9 +145,9 @@ const calTicket = () => {
     document.getElementById("order-summary").innerHTML = outputData;
 }
 
-
-document.getElementById("submit-btn").addEventListener("click", calTicket);
-
+if (document.getElementById("submit-btn") !== null) {
+    document.getElementById("submit-btn").addEventListener("click", calTicket);
+}
 
 
 const headLinerList = [
@@ -249,4 +249,6 @@ const changeOption = () => {
 
 
 window.addEventListener("load", ticketTypeOption);
-document.getElementById("ticket-type").addEventListener("change", changeOption);
+if (document.getElementById("ticket-type") !== null) {
+    document.getElementById("ticket-type").addEventListener("change", changeOption);
+}
