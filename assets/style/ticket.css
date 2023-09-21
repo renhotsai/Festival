@@ -6,7 +6,9 @@
     margin: 0 auto;
     height: 85vh;
 }
-
+h1 {
+    width: max-content;
+}
 #ticket-title {
     text-align: center; 
 }
