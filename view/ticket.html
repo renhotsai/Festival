@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="../assets/style/ticket.css" />
     <script src="../assets/js/ticket.js" defer="true"></script>
 
+    <script src="https://kit.fontawesome.com/1ed057f542.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header></header>
     <div id="ticket-form-container">
       <h1 id="ticket-title">Ticket Purchase</h1>
-      <form>
+      <form style="background-color: white; padding: 20px; border: 2px black solid; border-radius: 10px; box-shadow: 16px 8px 0px 0px rgba(0,0,0,0.1);">
         <label for="ticket-type">Choose the ticket type</label>
         <select id="ticket-type"></select>
         <label for="ticket-name">Choose the ticket name</label>
@@ -38,9 +39,9 @@
           id="ticket-credit-info"
           type="number"
           placeholder="Enter the card number"
-        />
-      </form>
-      <button id="submit-btn">Pay now</button>
+          />
+          <button id="submit-btn">Pay now</button>
+        </form>
       <section id="order-summary"></section>
     </div>
 

@@ -20,6 +20,7 @@ document.querySelector("header").innerHTML = headerTag;
 
 // footer
 const footerItems = [
+
   {
     name: "instagram",
     icon: `<i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>`,
@@ -35,6 +36,7 @@ const footerItems = [
     icon: `<i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i>`,
     uri: `https://www.youtube.com/justforlaughs`,
   },
+
 ];
 let footerTag = `
 <div style="align-items: end;">
@@ -43,7 +45,9 @@ let footerTag = `
   alt="hahahaIcon"
   style="width: 120px"
 />
+
 <p id="copyright"> This website was created for educational and study purposes only. All information and images used on this website may be owned by <a href="https://toronto.hahaha.com/">hahaha</a> and are used here for demonstration purposes. No copyright infringement is intended.</p>
+
 
 </div>
 <div style="display: flex; flex-direction: column;">

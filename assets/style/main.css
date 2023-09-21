@@ -17,6 +17,7 @@ main > div {
 #ticketSection {
     background-color: #FC87A2;
     padding-bottom: 30px;
+    padding-top: 2%;
     text-align: center;
 }
 
@@ -69,4 +70,19 @@ main > div {
     border: #D80032 1px solid;
     color: #D80032;
 }
+
+/* Code for mapping */
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+#map {
+    width: 960px; 
+    height: 500px; 
+
+}
+
 
