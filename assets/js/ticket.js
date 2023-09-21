@@ -101,7 +101,7 @@ const individualTickets = () => {
                                 <div class="ticketInfo">
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup style="color:#D80032">${ticket.cent}</sup><sup>*</sup></p>
-                                <a href="#" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("individualTickets").innerHTML += ticketContainer;
     });
@@ -118,7 +118,7 @@ const headLinerTickets = () => {
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="ticketContent">${ticket.info2}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-                                <a href="#" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("headLinerTicket").innerHTML += ticketContainer;
     });
@@ -132,7 +132,7 @@ const classicPasses = () => {
                                 <p class="ticketName">${ticket.name}</p>
                                 <p class="ticketContent">${ticket.info1}</p>
                                 <p class="amt"><sup>$</sup>${ticket.amt}<sup>*</sup></p>
-                                <a href="#" class="btn_buy">Buy</a>
+                                <a href="../view/ticket.html" class="btn_buy">Buy</a>
                                 </div>`;
         document.getElementById("classicPasses").innerHTML += ticketContainer;
     });
