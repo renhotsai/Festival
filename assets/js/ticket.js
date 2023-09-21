@@ -22,39 +22,113 @@
 //     document.getElementById("ticket-name").innerHTML = outputData;
 // }
 
+// const calTicket = () => {
+//     const ticket_quantity = document.getElementById("ticket-quantity").value;
+//     const ticket_credit_info = document.getElementById("ticket-credit-info").value;
+//     const ticket_name = document.getElementById("ticket-name").value;
+//     let ticket_price;
+//     let outputData = ``;
+
+//     if (ticket_quantity <= 0) {
+//         outputData += `<p style="color: red;"> Error: Minimum ticket quantity is 1!</p>`;
+//     } else if (ticket_credit_info.length !== 6) {
+//         outputData += `<p style="color: red;"> Error: Credit card number should be 6 digits!</p>`;
+//     } else {
+//         if (ticket_name === "single") {
+//             ticket_price = 39.5;
+//         } else if (ticket_name === "credit-two-pass") {
+//             ticket_price = 69;
+//         } else if (ticket_name === "credit-four-pass") {
+//             ticket_price = 99;
+//         } else if (ticket_name === "credit-six-pass") {
+//             ticket_price = 119;
+//         } else if (ticket_name === "headliner-two-pass") {
+//             ticket_price = 94;
+//         } else if (ticket_name === "headliner-six-pass") {
+//             ticket_price = 144;
+//         } else if (ticket_name === "headliner-tweleve-pass") {
+//             ticket_price = 204;
+//         }
+
+//         const subtotal = ticket_price * ticket_quantity;
+//         const tax = subtotal * 0.13;
+//         const final_price = subtotal + tax;
+
+//         outputData += `<div style="display: flex; 
+//                                    flex-direction: column; 
+//                                    border: 2px solid black; 
+//                                    background-color: #F1EFEF;
+//                                    padding: 30px;
+//                                    margin-top: 15px">
+//                         <h2> Transaction receipt </h2>
+//                         <p> Number of tickets: ${ticket_quantity}</p>
+//                         <p> Price per ticket: $${ticket_price.toFixed(2)}</p>
+//                         <p> Subtotal: $${subtotal.toFixed(2)}</p>
+//                         <p> Tax (13%): $${tax.toFixed(2)}</p>
+//                         <p> Final Price: $${final_price.toFixed(2)}</p>
+//                        </div>`
+//     }
+
+//     document.getElementById("order-summary").innerHTML = outputData;
+// }
+
+
+
 const calTicket = () => {
+
     const ticket_quantity = document.getElementById("ticket-quantity").value;
+    const ticketIndex = parseInt(document.getElementById("ticket-name").value);
     const ticket_credit_info = document.getElementById("ticket-credit-info").value;
-    const ticket_name = document.getElementById("ticket-name").value;
-    let ticket_price;
+
     let outputData = ``;
+    let ticketAmt = 0;
 
-    if (ticket_quantity <= 0) {
+    if(ticket_quantity === ""){
         outputData += `<p style="color: red;"> Error: Minimum ticket quantity is 1!</p>`;
-    } else if (ticket_credit_info.length !== 6) {
+        document.getElementById("order-summary").innerHTML = outputData;
+        return;
+    }
+
+    if (ticket_credit_info.length !== 6) {
         outputData += `<p style="color: red;"> Error: Credit card number should be 6 digits!</p>`;
-    } else {
-        if (ticket_name === "single") {
-            ticket_price = 39.5;
-        } else if (ticket_name === "credit-two-pass") {
-            ticket_price = 69;
-        } else if (ticket_name === "credit-four-pass") {
-            ticket_price = 99;
-        } else if (ticket_name === "credit-six-pass") {
-            ticket_price = 119;
-        } else if (ticket_name === "headliner-two-pass") {
-            ticket_price = 94;
-        } else if (ticket_name === "headliner-six-pass") {
-            ticket_price = 144;
-        } else if (ticket_name === "headliner-tweleve-pass") {
-            ticket_price = 204;
-        }
+        document.getElementById("order-summary").innerHTML = outputData;
+        return;
+    }
 
-        const subtotal = ticket_price * ticket_quantity;
-        const tax = subtotal * 0.13;
-        const final_price = subtotal + tax;
+    switch (ticketIndex) {
+        case 1:
+        case 2:
+        case 3:
+            headLinerList.forEach(ticket => {
+                if (ticket.id === ticketIndex) {
+                    ticketAmt = ticket.total;
+                    return;
+                }
+            });
+            break;
+        case 4:
+        case 5:
+        case 6:
+            classicPassList.forEach(ticket => {
+                if (ticket.id === ticketIndex) {
+                    ticketAmt = ticket.total;
+                    return;
+                }
+            });
+        default:
+            individualTicketList.forEach(ticket => {
+                if (ticket.id === ticketIndex) {
+                    ticketAmt = ticket.total;
+                    return;
+                }
+            });
+            break;
+    }
+    const subtotal = ticketAmt * ticket_quantity;
+    const tax = subtotal * 0.13;
+    const final_price = subtotal + tax;
 
-        outputData += `<div style="display: flex; 
+    outputData += `<div style="display: flex; 
                                    flex-direction: column; 
                                    border: 2px solid black; 
                                    background-color: #F1EFEF;
@@ -62,15 +136,18 @@ const calTicket = () => {
                                    margin-top: 15px">
                         <h2> Transaction receipt </h2>
                         <p> Number of tickets: ${ticket_quantity}</p>
-                        <p> Price per ticket: $${ticket_price.toFixed(2)}</p>
+                        <p> Price per ticket: $${ticketAmt.toFixed(2)}</p>
                         <p> Subtotal: $${subtotal.toFixed(2)}</p>
                         <p> Tax (13%): $${tax.toFixed(2)}</p>
                         <p> Final Price: $${final_price.toFixed(2)}</p>
                        </div>`
-    }
 
     document.getElementById("order-summary").innerHTML = outputData;
 }
+
+
+document.getElementById("submit-btn").addEventListener("click", calTicket);
+
 
 
 const headLinerList = [
@@ -169,4 +246,7 @@ const changeOption = () => {
         }
     });
 }
+
+
 window.addEventListener("load", ticketTypeOption);
+document.getElementById("ticket-type").addEventListener("change", changeOption);
