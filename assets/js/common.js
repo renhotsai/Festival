@@ -1,7 +1,7 @@
 // header
 const headerItems = [
     { name: "Home", uri: "../index.html" },
-    { name: "Details", uri: "/view/details.html" },
+    { name: "Artists", uri: "/view/artists.html" },
     { name: "Tickets", uri: "/view/ticket.html" },
     { name: "Contact", uri: "/view/contact.html"},
 ];
