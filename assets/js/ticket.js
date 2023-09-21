@@ -1,8 +1,10 @@
 const calTicket = () => {
 
+    document.getElementById("order-summary").innerHTML = "";
     const ticket_quantity = document.getElementById("ticket-quantity").value;
     const ticketIndex = parseInt(document.getElementById("ticket-name").value);
     const ticket_credit_info = document.getElementById("ticket-credit-info").value;
+    const ticketType = document.getElementById("ticket-type").value;
 
     let outputData = ``;
     let ticketAmt = 0;
@@ -19,10 +21,8 @@ const calTicket = () => {
         return;
     }
 
-    switch (ticketIndex) {
-        case 1:
-        case 2:
-        case 3:
+    switch (ticketType) {
+        case "headLiner":
             headLinerList.forEach(ticket => {
                 if (ticket.id === ticketIndex) {
                     ticketAmt = ticket.total;
@@ -30,9 +30,7 @@ const calTicket = () => {
                 }
             });
             break;
-        case 4:
-        case 5:
-        case 6:
+        case "classicPass":
             classicPassList.forEach(ticket => {
                 if (ticket.id === ticketIndex) {
                     ticketAmt = ticket.total;
@@ -58,7 +56,8 @@ const calTicket = () => {
                                    background-color: #F1EFEF;
                                    padding: 30px;
                                    margin-top: 15px;
-                                   border-radius: 15px;">
+                                   border-radius: 15px;
+                                   width: max-content;">
                         <h2> Transaction receipt </h2>
                         <p>------------------------------</p>
                         <p> Number of tickets: ${ticket_quantity}</p>
@@ -68,7 +67,7 @@ const calTicket = () => {
                         <p> Final Price: $${final_price.toFixed(2)}</p>
                        </div>`
 
-    document.getElementById("order-summary").innerHTML = outputData;
+    document.getElementById("order").innerHTML = outputData;
 }
 
 if (document.getElementById("submit-btn") !== null) {

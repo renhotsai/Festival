@@ -17,7 +17,8 @@
     <header></header>
     <div id="ticket-form-container">
       <h1 id="ticket-title">Ticket Purchase</h1>
-      <form style="background-color: white; padding: 20px; border: 2px black solid; border-radius: 10px; box-shadow: 16px 8px 0px 0px rgba(0,0,0,0.1);">
+      <section id="order">
+      <form style="background-color: white; padding: 20px; border: 2px black solid; border-radius: 10px; box-shadow: 16px 8px 0px 0px rgba(0,0,0,0.1); width: max-content;">
         <label for="ticket-type">Choose the ticket type</label>
         <select id="ticket-type"></select>
         <label for="ticket-name">Choose the ticket name</label>
@@ -39,11 +40,10 @@
           type="number"
           placeholder="Enter the card number"
           />
-          <button id="submit-btn">Pay now</button>
-          <section id="order-summary"></section>
+          <button id="submit-btn" type="button">Pay now</button>
         </form>
-
-
+        </section>
+        <section id="order-summary">
     </div>
 
     <footer></footer>
