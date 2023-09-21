@@ -15,7 +15,8 @@
     <script src="./assets/js/ticket.js"></script>
 </head>
 
-<body onload="everyFirstTicket('indexTickets')">
+<body>
+
     <header>
     </header>
     <main>
@@ -89,7 +90,9 @@
           <a href="#" class="learnMore">LEARN MORE</a>
         </section>
       </div>
-
+      <script>
+        window.addEventListener("loadstart",allTickets());
+      </script>
     <!-- Map section -->
     <section style="display: flex; flex-direction: column; align-items: center;">
         <h1>Map for events: </h1>
