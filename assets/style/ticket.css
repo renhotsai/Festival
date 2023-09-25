@@ -5,6 +5,7 @@
     width: 20%;
     margin: 0 auto;
     height: 85vh;
+    width : max-content;
 }
 
 #ticket-title {
@@ -45,3 +46,4 @@ button {
 button:hover {
     background-color: #437A35;
 }
+
